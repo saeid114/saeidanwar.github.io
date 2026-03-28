@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammad Saeid Anwar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  line-height: 1.65;
+}
+
+a { color: #337ab7; text-decoration: none; }
+a:hover { color: #23527c; text-decoration: underline; }
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: #222;
+  padding: 10px 15px;
+  border-bottom: 2px solid #337ab7;
+}
+.top-bar-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.top-bar .branding .univ-badge {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffd54f;
+  letter-spacing: 1.5px;
+}
+.top-bar .branding .site-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.top-bar .social-links {
+  display: flex;
+  gap: 14px;
+}
+.top-bar .social-links a {
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-bar .social-links a:hover { color: #fff; }
+
+/* ===== HORIZONTAL NAV TABS ===== */
+.nav-tabs-bar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.nav-tabs-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav-tabs-inner::-webkit-scrollbar { display: none; }
+.nav-tab {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.nav-tab:hover {
+  color: #337ab7;
+  text-decoration: none;
+  background: #f8f8f8;
+}
+.nav-tab.active {
+  color: #337ab7;
+  border-bottom-color: #337ab7;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+.mobile-menu-btn::after { content: ' ▾'; }
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+.main-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  text-align: center;
+  position: sticky;
+  top: 70px;
+}
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 80px;
+  color: #999;
+}
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+.sidebar h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.sidebar h4 a { font-weight: 600; }
+.sidebar .research-areas {
+  margin-top: 16px;
+  text-align: center;
+}
+.sidebar .research-areas h4 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+.sidebar .research-areas em {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.8;
+}
+.sidebar .doc-links {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sidebar .doc-links a {
+  display: inline-block;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #337ab7;
+  border: 1px solid #337ab7;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.sidebar .doc-links a:hover {
+  background: #337ab7;
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar .contact-info {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.8;
+}
+.sidebar .contact-info a { color: #337ab7; }
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Section */
+.section-block {
+  margin-bottom: 30px;
+  scroll-margin-top: 70px;
+}
+.section-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 0;
+  gap: 8px;
+}
+.section-toggle .toggle-icon {
+  font-size: 11px;
+  color: #999;
+  transition: transform 0.2s;
+  width: 16px;
+  text-align: center;
+}
+.section-toggle h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+.section-toggle:hover h2 { color: #337ab7; }
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 6px 0 16px;
+}
+.section-body {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.section-body.collapsed {
+  max-height: 0 !important;
+  overflow: hidden;
+}
+
+/* Toggle All */
+.toggle-all {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+.toggle-all button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.toggle-all button:hover { border-color: #337ab7; color: #337ab7; }
+
+/* ===== NEWS TABLE ===== */
+.news-table { width: 100%; border-collapse: collapse; }
+.news-table td {
+  padding: 7px 8px;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13.5px;
+}
+.news-table td:first-child {
+  width: 80px;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+}
+.news-table tr:hover { background: #fafafa; }
+
+/* ===== PUBLICATIONS ===== */
+.pub-list-academic { list-style: none; }
+.pub-list-academic li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.pub-list-academic li:last-child { border-bottom: none; }
+.pub-venue-tag {
+  display: inline-block;
+  background: #337ab7;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.pub-venue-tag.review { background: #d9534f; }
+.pub-author-me { font-weight: 700; }
+.all-pubs-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid { margin-bottom: 16px; }
+.skills-grid h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.skills-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.skill-tag {
+  display: inline-block;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 3px 10px;
+  font-size: 12.5px;
+  border-radius: 3px;
+  color: #555;
+}
+
+/* ===== EXPERIENCE ===== */
+.exp-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.exp-item:last-child { border-bottom: none; }
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+.exp-header h4 { font-size: 14px; font-weight: 700; color: #333; margin: 0; }
+.exp-date { font-size: 12px; color: #888; font-weight: 600; }
+.exp-org { font-size: 13px; color: #666; font-style: italic; margin: 2px 0 6px; }
+.exp-item p { font-size: 13.5px; color: #555; }
+
+/* ===== BLOG ===== */
+.blog-list { list-style: none; }
+.blog-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.blog-list li:last-child { border-bottom: none; }
+.blog-date { font-size: 12px; color: #888; font-weight: 600; }
+.blog-list h4 { font-size: 14px; font-weight: 600; color: #333; margin: 2px 0 4px; }
+.blog-list p { font-size: 13px; color: #666; }
+
+/* ===== INTRO ===== */
+.intro-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+.intro-text p { margin-bottom: 12px; }
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 40px;
+  padding: 20px 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main-layout { flex-direction: column; gap: 24px; }
+  .sidebar { width: 100%; position: static; }
+  .top-bar .social-links { display: none; }
+  .nav-tabs-inner { display: none; }
+  .nav-tabs-inner.active { display: flex; flex-direction: column; }
+  .nav-tab { border-bottom-color: transparent !important; border-left: 3px solid transparent; padding: 10px 18px; }
+  .nav-tab.active { border-left-color: #337ab7; border-bottom-color: transparent !important; }
+  .mobile-menu-btn { display: block; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <a href="#" class="branding">
+      <span class="univ-badge">UMBC</span>
+      <span class="site-name">Mohammad Saeid Anwar</span>
+    </a>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+    </div>
+  </div>
+</div>
+
+<!-- HORIZONTAL NAV TABS -->
+<div class="nav-tabs-bar">
+  <button class="mobile-menu-btn" onclick="document.getElementById('tabNav').classList.toggle('active')">Menu</button>
+  <div class="nav-tabs-inner" id="tabNav">
+    <a href="#home" class="nav-tab active" data-section="home">Home</a>
+    <a href="#news" class="nav-tab" data-section="news">News</a>
+    <a href="#publications" class="nav-tab" data-section="publications">Publications</a>
+    <a href="#skills" class="nav-tab" data-section="skills">Skills</a>
+    <a href="#experience" class="nav-tab" data-section="experience">Experience</a>
+    <a href="#education" class="nav-tab" data-section="education">Education</a>
+    <a href="#blog" class="nav-tab" data-section="blog">Blog</a>
+  </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+  <div class="main-layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="profile-img">👤</div>
+      <h2>Mohammad Saeid Anwar</h2>
+      <h4>PhD Candidate<br><a href="https://www.umbc.edu/" target="_blank">University of Maryland, Baltimore County</a></h4>
+      <h4>Department of Information Systems</h4>
+
+      <div class="research-areas">
+        <h4>Research Areas</h4>
+        <em>Computer Vision<br>
+        Edge Distributed Computing<br>
+        ROS-based Autonomous Systems<br>
+        Multimodal AI &amp; Sensor Fusion<br>
+        Vision-Language Models</em>
+      </div>
+
+      <div class="doc-links">
+        <a href="#">CV</a>
+        <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+      </div>
+
+      <div class="contact-info">
+        <a href="mailto:saeid.anwar114@gmail.com">saeid.anwar114@gmail.com</a><br>
+        (443) 514-9310<br>
+        <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/" target="_blank">GitHub</a><br>
+        Halethorpe, MD, USA
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- TOGGLE ALL -->
+      <div class="toggle-all">
+        <button onclick="toggleAll(true)">EXPAND ALL SECTIONS</button>
+        <button onclick="toggleAll(false)">COLLAPSE ALL SECTIONS</button>
+      </div>
+
+      <!-- INTRODUCTION -->
+      <div class="section-block" id="home">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Introduction</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <div class="intro-text">
+            <p>I am a PhD candidate in Information Systems at the University of Maryland, Baltimore County, advised by <a href="#">Prof. Nirmalya Roy</a>. My research focuses on <strong>resource-aware real-time collaborative task execution for improved perception in heterogeneous autonomous systems</strong>.</p>
+            <p>My core research interests lie in <strong>Computer Vision</strong>, <strong>Edge Distributed Computing</strong>, and <strong>ROS-based autonomous systems</strong>. I have 4+ years of experience in designing scalable AI/ML solutions for real-time perception, multimodal sensor fusion, and task allocation in heterogeneous autonomous systems (UAVs &amp; UGVs).</p>
+            <p>In my most recent work, I'm exploring the integration of <strong>Vision-Language Models (VLMs)</strong> into autonomous ground vehicles for enhanced situational awareness and adaptive decision-making in complex urban environments. I'm also working on improving <strong>3D perception</strong> by fusing RGB, LiDAR, and radar data to enhance detection accuracy and segmentation precision in dynamic, unstructured environments.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEWS -->
+      <div class="section-block" id="news">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>News</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <table class="news-table">
+            <tr><td>03/2026</td><td>Paper titled <strong>"COHORT: Hybrid RL for Collaborative Large DNN Inference on Multi-Robot Systems Under Real-Time Constraints"</strong> accepted at <strong>IEEE WoWMoM 2026</strong>!</td></tr>
+            <tr><td>11/2025</td><td>Paper titled <strong>"Imitation-Inspired Semantic-Guided Distillation for User-Conditioned Memorability Prediction"</strong> accepted at <strong>IEEE ICDM 2025</strong>.</td></tr>
+            <tr><td>06/2025</td><td>Paper titled <strong>"CoOpTex: Multimodal Cooperative Perception and Task Execution in Time-critical Distributed Autonomous Systems"</strong> accepted at <strong>DCOSS-IoT 2025</strong>.</td></tr>
+            <tr><td>05/2025</td><td>Paper titled <strong>"SkillNet: Human Actions Assessment via Human-AI Collaboration"</strong> accepted at <strong>ACM TOMM 2025</strong>.</td></tr>
+            <tr><td>07/2024</td><td>Paper titled <strong>"A Reliable and Low Latency Synchronizing Middleware for Co-simulation of Heterogeneous Multi-Robot Systems"</strong> accepted at <strong>ICCCN 2024</strong>.</td></tr>
+            <tr><td>03/2024</td><td>Paper titled <strong>"Arsfinetune: On-the-fly Tuning of Vision Models for Unmanned Ground Vehicles"</strong> accepted at <strong>DCOSS-IoT 2024</strong>. Congratulations to all co-authors!</td></tr>
+            <tr><td>10/2023</td><td>Paper titled <strong>"HeteroEdge: Addressing Asymmetry in Heterogeneous Collaborative Autonomous Systems"</strong> accepted at <strong>IEEE MASS 2023</strong>.</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="section-block" id="publications">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Selected Publications</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <ul class="pub-list-academic">
+            <li>
+              <span class="pub-venue-tag">IEEE WoWMoM'26</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "COHORT: Hybrid RL for Collaborative Large DNN Inference on Multi-Robot Systems Under Real-Time Constraints," In Proc. of IEEE WoWMoM, 2026.
+            </li>
+            <li>
+              <span class="pub-venue-tag">IEEE ICDM'25</span>
+              I. Ghosh, <span class="pub-author-me">M. S. Anwar</span>, K. Jayarajah, and N. Roy, "Imitation-Inspired Semantic-Guided Distillation for User-Conditioned Memorability Prediction," In Proc. of the 25th IEEE International Conference on Data Mining, 2025.
+            </li>
+            <li>
+              <span class="pub-venue-tag">DCOSS-IoT'25</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "CoOpTex: Multimodal Cooperative Perception and Task Execution in Time-critical Distributed Autonomous Systems," In Proc. of DCOSS-IoT, 2025.
+            </li>
+            <li>
+              <span class="pub-venue-tag">ACM TOMM'25</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "SkillNet: Human Actions Assessment via Human-AI Collaboration," ACM Transactions on Multimedia Computing, Communications, and Applications, 2025.
+            </li>
+            <li>
+              <span class="pub-venue-tag review">Under Review</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "SERN: Simulation-Enhanced Realistic Navigation for Multi-Agent Robotic Systems in Contested Environments."
+            </li>
+            <li>
+              <span class="pub-venue-tag review">Under Review</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "MobHeteroCAS: Mobility-Aware DNN Task Scheduling in Heterogeneous Collaborative Autonomous Systems," ACM TAAS Journal, 2024.
+            </li>
+            <li>
+              <span class="pub-venue-tag">DCOSS-IoT'24</span>
+              Ahmed, M., Hasan, Z., Faridee, A. Z. M., <span class="pub-author-me">Anwar, M. S.</span>, Jayarajah, K., Purushotham, S., ... &amp; Roy, N., "Arsfinetune: On-the-fly Tuning of Vision Models for Unmanned Ground Vehicles," Proc. of DCOSS-IoT, 2024.
+            </li>
+            <li>
+              <span class="pub-venue-tag">ICCCN'24</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "A Reliable and Low Latency Synchronizing Middleware for Co-simulation of a Heterogeneous Multi-Robot Systems," In Proc. of ICCCN, 2024.
+            </li>
+            <li>
+              <span class="pub-venue-tag">IEEE MASS'23</span>
+              <span class="pub-author-me">M. S. Anwar</span>, E. Dey, M. Devnath, I. Ghosh, N. Khan, J. Freeman, T. Gregory, N. Suri, K. Jayarajah, S. Ramamurthy, N. Roy, "HeteroEdge: Addressing Asymmetry in Heterogeneous Collaborative Autonomous Systems," In Proc. of IEEE MASS, 2023.
+            </li>
+            <li>
+              <span class="pub-venue-tag">IEEE EICT'19</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "An Efficient Technique of Hemoglobin Level Screening Using Machine Learning Algorithms," IEEE EICT, 2019.
+            </li>
+            <li>
+              <span class="pub-venue-tag">BECITHCON'19</span>
+              <span class="pub-author-me">M. S. Anwar</span> et al. "Comparative Study Between Decision Tree, SVM and KNN to Predict Anaemic Condition," IEEE BECITHCON, 2019.
+            </li>
+          </ul>
+          <a href="https://scholar.google.com/" target="_blank" class="all-pubs-link">All Publications »</a>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section-block" id="skills">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Skills</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <div class="skills-grid">
+            <h4>Languages</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Python</span><span class="skill-tag">MATLAB</span><span class="skill-tag">C</span><span class="skill-tag">R</span>
+            </div>
+            <h4>ML / AI</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Keras</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">Transformer / LLM</span><span class="skill-tag">Multimodal AI</span><span class="skill-tag">Gen AI (GAN, VAE, Diffusion)</span><span class="skill-tag">NLP</span><span class="skill-tag">Image Segmentation</span><span class="skill-tag">Fine-tuning (PEFT)</span><span class="skill-tag">Distributed Training</span>
+            </div>
+            <h4>Robotics &amp; Hardware</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">ROS1 / ROS2</span><span class="skill-tag">Jetson Nano</span><span class="skill-tag">Jetson Xavier</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">Intel NCS2</span><span class="skill-tag">Arduino</span><span class="skill-tag">Clearpath Jackal</span><span class="skill-tag">Husky A300</span><span class="skill-tag">Boston Dynamics SPOT</span><span class="skill-tag">Modal AI Drone</span>
+            </div>
+            <h4>Tools &amp; Simulation</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Git</span><span class="skill-tag">Linux / Debian</span><span class="skill-tag">Gazebo</span><span class="skill-tag">Unity</span><span class="skill-tag">Simulink</span><span class="skill-tag">Tableau</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Matplotlib</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section-block" id="experience">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Experience</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <div class="exp-item">
+            <div class="exp-header">
+              <h4>Graduate Research Assistant</h4>
+              <span class="exp-date">Jan 2022 – Present</span>
+            </div>
+            <div class="exp-org">University of Maryland, Baltimore County, MD, USA</div>
+            <p>Developing frameworks for efficient UAV-UGV collaboration, optimizing task distribution and reducing communication overhead. Improving 3D perception by fusing RGB, LiDAR, and radar data. Integrating Vision-Language Models (VLMs) into autonomous ground vehicles for enhanced situational awareness.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <h4>Graduate Teaching Assistant</h4>
+              <span class="exp-date">Jan 2022 – Dec 2023</span>
+            </div>
+            <div class="exp-org">University of Maryland, Baltimore County, MD, USA</div>
+            <p>IS-603 (Decision-making Support System), IS-425 (Decision Support System), IS-733 (Data Mining).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section-block" id="education">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Education</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <div class="exp-item">
+            <div class="exp-header">
+              <h4>Doctor of Philosophy (PhD) in Information Systems</h4>
+              <span class="exp-date">Jan 2022 – Present</span>
+            </div>
+            <div class="exp-org">University of Maryland, Baltimore County</div>
+            <p><strong>PhD Topic:</strong> Resource-Aware Real-Time Collaborative Task Execution for Improved Perception In Heterogeneous Autonomous Systems<br>
+            <strong>Advisor:</strong> Nirmalya Roy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOG -->
+      <div class="section-block" id="blog">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">▼</span>
+          <h2>Blog &amp; News</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <ul class="blog-list">
+            <li>
+              <span class="blog-date">2026 · Research Update</span>
+              <h4>COHORT Accepted at IEEE WoWMoM 2026</h4>
+              <p>Our work on hybrid RL for collaborative DNN inference on multi-robot systems was accepted. More details coming soon.</p>
+            </li>
+            <li>
+              <span class="blog-date">2025 · Research Update</span>
+              <h4>Three Papers Published in 2025</h4>
+              <p>Exciting year with publications at ICDM, DCOSS-IoT, and ACM TOMM covering distillation, cooperative perception, and human action assessment.</p>
+            </li>
+            <li>
+              <span class="blog-date">2025 · Project Spotlight</span>
+              <h4>VLMs Meet Autonomous Ground Vehicles</h4>
+              <p>Ongoing research integrating Vision-Language Models into UGVs for human-like reasoning in complex urban environments.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /content -->
+  </div><!-- /main-layout -->
+</div><!-- /container -->
+
+<footer>
+  © 2026 | Mohammad Saeid Anwar
+</footer>
+
+<script>
+// Collapse / Expand
+function toggleSection(header) {
+  const body = header.nextElementSibling.nextElementSibling;
+  const icon = header.querySelector('.toggle-icon');
+  body.classList.toggle('collapsed');
+  icon.textContent = body.classList.contains('collapsed') ? '▶' : '▼';
+}
+
+function toggleAll(expand) {
+  document.querySelectorAll('.section-body').forEach(body => {
+    const icon = body.previousElementSibling.previousElementSibling.querySelector('.toggle-icon');
+    if (expand) {
+      body.classList.remove('collapsed');
+      icon.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      icon.textContent = '▶';
+    }
+  });
+}
+
+// Set initial max-heights
+document.querySelectorAll('.section-body').forEach(body => {
+  body.style.maxHeight = body.scrollHeight + 2000 + 'px';
+});
+
+// Active tab on scroll
+const sections = document.querySelectorAll('.section-block');
+const navTabs = document.querySelectorAll('.nav-tab');
+
+function updateActiveTab() {
+  let current = '';
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 100) {
+      current = section.getAttribute('id');
+    }
+  });
+  navTabs.forEach(tab => {
+    tab.classList.remove('active');
+    if (tab.getAttribute('data-section') === current) {
+      tab.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', updateActiveTab, { passive: true });
+
+// Close mobile menu on click
+navTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.getElementById('tabNav').classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>
