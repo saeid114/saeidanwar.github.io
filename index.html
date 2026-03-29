@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -16,10 +16,10 @@ body {
   background: #fff;
   line-height: 1.65;
 }
-
+ 
 a { color: #337ab7; text-decoration: none; }
 a:hover { color: #23527c; text-decoration: underline; }
-
+ 
 /* ===== TOP BAR ===== */
 .top-bar {
   background: #222;
@@ -65,7 +65,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   text-decoration: none;
 }
 .top-bar .social-links a:hover { color: #fff; }
-
+ 
 /* ===== HORIZONTAL NAV TABS ===== */
 .nav-tabs-bar {
   background: #fff;
@@ -110,7 +110,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   color: #337ab7;
   border-bottom-color: #337ab7;
 }
-
+ 
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -126,7 +126,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   font-family: inherit;
 }
 .mobile-menu-btn::after { content: ' ▾'; }
-
+ 
 /* ===== MAIN CONTAINER ===== */
 .container {
   max-width: 1170px;
@@ -138,7 +138,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   gap: 40px;
   align-items: flex-start;
 }
-
+ 
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: 320px;
@@ -220,13 +220,13 @@ a:hover { color: #23527c; text-decoration: underline; }
   line-height: 1.8;
 }
 .sidebar .contact-info a { color: #337ab7; }
-
+ 
 /* ===== CONTENT ===== */
 .content {
   flex: 1;
   min-width: 0;
 }
-
+ 
 /* Section */
 .section-block {
   margin-bottom: 30px;
@@ -267,7 +267,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   max-height: 0 !important;
   overflow: hidden;
 }
-
+ 
 /* Toggle All */
 .toggle-all {
   display: flex;
@@ -288,7 +288,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   transition: all 0.2s;
 }
 .toggle-all button:hover { border-color: #337ab7; color: #337ab7; }
-
+ 
 /* ===== NEWS TABLE ===== */
 .news-table { width: 100%; border-collapse: collapse; }
 .news-table td {
@@ -304,14 +304,34 @@ a:hover { color: #23527c; text-decoration: underline; }
   white-space: nowrap;
 }
 .news-table tr:hover { background: #fafafa; }
-
-
-/* ===== PUBLICATIONS (expandable) ===== */
+ 
+/* ===== PUBLICATIONS ===== */
+.pub-list-academic { list-style: none; }
+.pub-venue-tag {
+  display: inline-block;
+  background: #337ab7;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.pub-venue-tag.review { background: #d9534f; }
+.pub-author-me { font-weight: 700; }
+.all-pubs-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+ 
+/* ===== EXPANDABLE PUBLICATIONS ===== */
 .pub-entry {
   border-bottom: 1px solid #f0f0f0;
 }
 .pub-entry:last-child { border-bottom: none; }
-
 .pub-summary {
   padding: 12px 0;
   font-size: 13.5px;
@@ -335,7 +355,6 @@ a:hover { color: #23527c; text-decoration: underline; }
 }
 .pub-entry.open .pub-expand-icon { transform: rotate(90deg); }
 .pub-title-inline { font-weight: 600; }
-
 .pub-details {
   max-height: 0;
   overflow: hidden;
@@ -411,12 +430,7 @@ a:hover { color: #23527c; text-decoration: underline; }
 .pub-link-btn.slides:hover { background: #e67e22; color: #fff; text-decoration: none; }
 .pub-link-btn.doi { color: #337ab7; border-color: #337ab7; }
 .pub-link-btn.doi:hover { background: #337ab7; color: #fff; text-decoration: none; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .pub-details-inner { flex-direction: column; }
-  .pub-figure { width: 100%; max-width: 300px; }
-}
+ 
 /* ===== SKILLS ===== */
 .skills-grid { margin-bottom: 16px; }
 .skills-grid h4 {
@@ -437,7 +451,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   border-radius: 3px;
   color: #555;
 }
-
+ 
 /* ===== EXPERIENCE ===== */
 .exp-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
 .exp-item:last-child { border-bottom: none; }
@@ -446,7 +460,7 @@ a:hover { color: #23527c; text-decoration: underline; }
 .exp-date { font-size: 12px; color: #888; font-weight: 600; }
 .exp-org { font-size: 13px; color: #666; font-style: italic; margin: 2px 0 6px; }
 .exp-item p { font-size: 13.5px; color: #555; }
-
+ 
 /* ===== BLOG ===== */
 .blog-list { list-style: none; }
 .blog-list li {
@@ -457,7 +471,7 @@ a:hover { color: #23527c; text-decoration: underline; }
 .blog-date { font-size: 12px; color: #888; font-weight: 600; }
 .blog-list h4 { font-size: 14px; font-weight: 600; color: #333; margin: 2px 0 4px; }
 .blog-list p { font-size: 13px; color: #666; }
-
+ 
 /* ===== INTRO ===== */
 .intro-text {
   font-size: 14px;
@@ -465,7 +479,7 @@ a:hover { color: #23527c; text-decoration: underline; }
   line-height: 1.8;
 }
 .intro-text p { margin-bottom: 12px; }
-
+ 
 /* ===== FOOTER ===== */
 footer {
   margin-top: 40px;
@@ -475,7 +489,7 @@ footer {
   font-size: 12px;
   color: #999;
 }
-
+ 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .main-layout { flex-direction: column; gap: 24px; }
@@ -486,11 +500,13 @@ footer {
   .nav-tab { border-bottom-color: transparent !important; border-left: 3px solid transparent; padding: 10px 18px; }
   .nav-tab.active { border-left-color: #337ab7; border-bottom-color: transparent !important; }
   .mobile-menu-btn { display: block; }
+  .pub-details-inner { flex-direction: column; }
+  .pub-figure { width: 100%; max-width: 300px; }
 }
 </style>
 </head>
 <body>
-
+ 
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -505,7 +521,7 @@ footer {
     </div>
   </div>
 </div>
-
+ 
 <!-- HORIZONTAL NAV TABS -->
 <div class="nav-tabs-bar">
   <button class="mobile-menu-btn" onclick="document.getElementById('tabNav').classList.toggle('active')">Menu</button>
@@ -519,18 +535,18 @@ footer {
     <a href="#blog" class="nav-tab" data-section="blog">Blog</a>
   </div>
 </div>
-
+ 
 <!-- MAIN CONTAINER -->
 <div class="container">
   <div class="main-layout">
-
+ 
     <!-- SIDEBAR -->
     <div class="sidebar">
       <img src="IMG_2461.jpeg" class="profile-img">
       <h2>Mohammad Saeid Anwar</h2>
       <h4>PhD Candidate<br><a href="https://www.umbc.edu/" target="_blank">University of Maryland, Baltimore County</a></h4>
       <h4>Department of Information Systems</h4>
-
+ 
       <div class="research-areas">
         <h4>Research Areas</h4>
         <em>Computer Vision<br>
@@ -539,12 +555,12 @@ footer {
         Machine Learning &amp; Sensor Fusion<br>
         Vision-Language Models</em>
       </div>
-
+ 
       <div class="doc-links">
         <a href="Saeid_Resume_2026.pdf">Resume</a>
         <a href="https://scholar.google.com/citations?user=CTceif4AAAAJ&hl=en" target="_blank">Google Scholar</a>
       </div>
-
+ 
       <div class="contact-info">
         <a href="mailto:saeid.anwar114@gmail.com">saeid.anwar114@gmail.com</a><br>
         <a href="https://www.linkedin.com/in/mohammad-saeid-anwar-b309b0199/" target="_blank">LinkedIn</a> |
@@ -552,16 +568,16 @@ footer {
         Halethorpe, MD, USA
       </div>
     </div>
-
+ 
     <!-- CONTENT -->
     <div class="content">
-
+ 
       <!-- TOGGLE ALL -->
       <div class="toggle-all">
         <button onclick="toggleAll(true)">EXPAND ALL SECTIONS</button>
         <button onclick="toggleAll(false)">COLLAPSE ALL SECTIONS</button>
       </div>
-
+ 
       <!-- INTRODUCTION -->
       <div class="section-block" id="home">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -577,7 +593,7 @@ footer {
           </div>
         </div>
       </div>
-
+ 
       <!-- NEWS -->
       <div class="section-block" id="news">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -598,9 +614,8 @@ footer {
           </table>
         </div>
       </div>
-    <!-- ============================= -->
-      <!-- PUBLICATIONS (with expandable details) -->
-      <!-- ============================= -->
+ 
+      <!-- PUBLICATIONS -->
       <div class="section-block" id="publications">
         <div class="section-toggle" onclick="toggleSection(this)">
           <span class="toggle-icon">▼</span>
@@ -610,47 +625,38 @@ footer {
         <div class="section-body">
           <ul class="pub-list-academic">
  
-            <!-- PUB 1: COHORT -->
+            <!-- COHORT -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">IEEE WoWMoM'26</span>
-                <span>
-                  <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"COHORT: Hybrid RL for Collaborative Large DNN Inference on Multi-Robot Systems Under Real-Time Constraints,"</span>
-                  In Proc. of IEEE WoWMoM, 2026.
-                </span>
+                <span><span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"COHORT: Hybrid RL for Collaborative Large DNN Inference on Multi-Robot Systems Under Real-Time Constraints,"</span> In Proc. of IEEE WoWMoM, 2026.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <!-- REPLACE: src="images/cohort.png" with your actual figure -->
+                    <!-- Replace with: <img src="images/cohort.png" alt="COHORT"> -->
                     <div class="fig-placeholder">📊 Add figure:<br>images/cohort.png</div>
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here. Describe the key contribution — e.g., a hybrid reinforcement learning approach for distributing DNN inference across multiple robots under real-time constraints.</p>
+                    <p class="pub-abstract">Add your abstract here.</p>
                     <div class="pub-links">
                       <a href="#" class="pub-link-btn pdf">📄 PDF</a>
                       <a href="#" class="pub-link-btn arxiv">arXiv</a>
                       <a href="#" class="pub-link-btn code">💻 Code</a>
-                      <a href="#" class="pub-link-btn slides">📑 Slides</a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
  
-            <!-- PUB 2: CAViAR -->
+            <!-- CAViAR -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">IEEE WoWMoM'26</span>
-                <span>
-                  Gaurav Shinde, Anuradha Ravi, Jared Lewis, Andre Harrison, Henry Gardiner, <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"CAViAR: Quality-Aware Vision-and-Radio Fusion for Relative Range Estimation among Collaborative Autonomous Agents,"</span>
-                  In Proc. of IEEE WoWMoM, 2026.
-                </span>
+                <span>Gaurav Shinde, Anuradha Ravi, Jared Lewis, Andre Harrison, Henry Gardiner, <span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"CAViAR: Quality-Aware Vision-and-Radio Fusion for Relative Range Estimation among Collaborative Autonomous Agents,"</span> In Proc. of IEEE WoWMoM, 2026.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -659,26 +665,21 @@ footer {
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here. Describe the vision-and-radio fusion approach for range estimation among collaborative autonomous agents.</p>
+                    <p class="pub-abstract">Add your abstract here.</p>
                     <div class="pub-links">
                       <a href="#" class="pub-link-btn pdf">📄 PDF</a>
-                      <a href="#" class="pub-link-btn arxiv">arXiv</a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
  
-            <!-- PUB 3: ICDM -->
+            <!-- ICDM -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">IEEE ICDM'25</span>
-                <span>
-                  I. Ghosh, <span class="pub-author-me">M. S. Anwar</span>, K. Jayarajah, and N. Roy,
-                  <span class="pub-title-inline">"Imitation-Inspired Semantic-Guided Distillation for User-Conditioned Memorability Prediction,"</span>
-                  In Proc. of the 25th IEEE ICDM, 2025.
-                </span>
+                <span>I. Ghosh, <span class="pub-author-me">M. S. Anwar</span>, K. Jayarajah, and N. Roy, <span class="pub-title-inline">"Imitation-Inspired Semantic-Guided Distillation for User-Conditioned Memorability Prediction,"</span> In Proc. of the 25th IEEE International Conference on Data Mining, 2025.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -696,16 +697,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 4: CoOpTex -->
+            <!-- CoOpTex -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">DCOSS-IoT'25</span>
-                <span>
-                  <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"CoOpTex: Multimodal Cooperative Perception and Task Execution in Time-critical Distributed Autonomous Systems,"</span>
-                  In Proc. of DCOSS-IoT, 2025.
-                </span>
+                <span><span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"CoOpTex: Multimodal Cooperative Perception and Task Execution in Time-critical Distributed Autonomous Systems,"</span> In Proc. of DCOSS-IoT, 2025.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -724,16 +721,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 5: SkillNet -->
+            <!-- SkillNet -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">ACM TOMM'25</span>
-                <span>
-                  I. Ghosh, Avijoy Chakma, <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"SkillNet: Human Actions Assessment via Human-AI Collaboration,"</span>
-                  ACM TOMM, 2025.
-                </span>
+                <span>I. Ghosh, Avijoy Chakma, <span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"SkillNet: Human Actions Assessment via Human-AI Collaboration,"</span> ACM Transactions on Multimedia Computing, Communications, and Applications, 2025.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -752,15 +745,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 6: SERN (Under Review) -->
+            <!-- SERN -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag review">Under Review</span>
-                <span>
-                  <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"SERN: Simulation-Enhanced Realistic Navigation for Multi-Agent Robotic Systems in Contested Environments."</span>
-                </span>
+                <span><span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"SERN: Simulation-Enhanced Realistic Navigation for Multi-Agent Robotic Systems in Contested Environments."</span></span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -778,16 +768,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 7: MobHeteroCAS (Under Review) -->
+            <!-- MobHeteroCAS -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag review">Under Review</span>
-                <span>
-                  <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"MobHeteroCAS: Mobility-Aware DNN Task Scheduling in Heterogeneous Collaborative Autonomous Systems,"</span>
-                  ACM TAAS Journal, 2024.
-                </span>
+                <span><span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"MobHeteroCAS: Mobility-Aware DNN Task Scheduling in Heterogeneous Collaborative Autonomous Systems,"</span> ACM TAAS Journal, 2024.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -805,16 +791,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 8: Arsfinetune -->
+            <!-- Arsfinetune -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">DCOSS-IoT'24</span>
-                <span>
-                  Ahmed, M., Hasan, Z., Faridee, A. Z. M., <span class="pub-author-me">Anwar, M. S.</span>, Jayarajah, K., Purushotham, S., ... &amp; Roy, N.,
-                  <span class="pub-title-inline">"Arsfinetune: On-the-fly Tuning of Vision Models for Unmanned Ground Vehicles,"</span>
-                  Proc. of DCOSS-IoT, 2024.
-                </span>
+                <span>Ahmed, M., Hasan, Z., Faridee, A. Z. M., <span class="pub-author-me">Anwar, M. S.</span>, Jayarajah, K., Purushotham, S., ... &amp; Roy, N., <span class="pub-title-inline">"Arsfinetune: On-the-fly Tuning of Vision Models for Unmanned Ground Vehicles,"</span> Proc. of DCOSS-IoT, 2024.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -832,16 +814,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 9: ICCCN -->
+            <!-- ICCCN -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
-                <span class="pub-venue-tag">ICCCN'24</span>
-                <span>
-                  Emon Dey, Mikolaj Walczak, <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"A Novel ROS2 QoS Policy-Enabled Synchronizing Middleware for Co-Simulation of Heterogeneous Multi-Robot Systems,"</span>
-                  In Proc. of ICCCN, 2024.
-                </span>
+                <span class="pub-venue-tag">ICCCN'23</span>
+                <span>Emon Dey, Mikolaj Walczak, <span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"A Novel ROS2 QoS Policy-Enabled Synchronizing Middleware for Co-Simulation of Heterogeneous Multi-Robot Systems,"</span> In Proc. of ICCCN, 2024.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -859,16 +837,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 10: HeteroEdge -->
+            <!-- HeteroEdge -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">IEEE MASS'23</span>
-                <span>
-                  <span class="pub-author-me">M. S. Anwar</span>, E. Dey, M. Devnath, I. Ghosh, N. Khan, J. Freeman, T. Gregory, N. Suri, K. Jayarajah, S. Ramamurthy, N. Roy,
-                  <span class="pub-title-inline">"HeteroEdge: Addressing Asymmetry in Heterogeneous Collaborative Autonomous Systems,"</span>
-                  In Proc. of IEEE MASS, 2023.
-                </span>
+                <span><span class="pub-author-me">M. S. Anwar</span>, E. Dey, M. Devnath, I. Ghosh, N. Khan, J. Freeman, T. Gregory, N. Suri, K. Jayarajah, S. Ramamurthy, N. Roy, <span class="pub-title-inline">"HeteroEdge: Addressing Asymmetry in Heterogeneous Collaborative Autonomous Systems,"</span> In Proc. of IEEE MASS, 2023.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -887,16 +861,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 11: EICT'19 -->
+            <!-- EICT'19 -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">IEEE EICT'19</span>
-                <span>
-                  NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"An Efficient Technique of Hemoglobin Level Screening Using Machine Learning Algorithms,"</span>
-                  IEEE EICT, 2019.
-                </span>
+                <span>NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"An Efficient Technique of Hemoglobin Level Screening Using Machine Learning Algorithms,"</span> IEEE EICT, 2019.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -914,16 +884,12 @@ footer {
               </div>
             </li>
  
-            <!-- PUB 12: BECITHCON'19 -->
+            <!-- BECITHCON'19 -->
             <li class="pub-entry">
               <div class="pub-summary" onclick="togglePub(this)">
                 <span class="pub-expand-icon">▶</span>
                 <span class="pub-venue-tag">BECITHCON'19</span>
-                <span>
-                  NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al.
-                  <span class="pub-title-inline">"Comparative Study Between Decision Tree, SVM and KNN to Predict Anaemic Condition,"</span>
-                  IEEE BECITHCON, 2019.
-                </span>
+                <span>NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al. <span class="pub-title-inline">"Comparative Study Between Decision Tree, SVM and KNN to Predict Anaemic Condition,"</span> IEEE BECITHCON, 2019.</span>
               </div>
               <div class="pub-details">
                 <div class="pub-details-inner">
@@ -946,72 +912,6 @@ footer {
         </div>
       </div>
  
-
-
-
-      
-      <!-- <!-- PUBLICATIONS -->
-      <div class="section-block" id="publications">
-        <div class="section-toggle" onclick="toggleSection(this)">
-          <span class="toggle-icon">▼</span>
-          <h2>Selected Publications</h2>
-        </div>
-        <hr class="section-divider">
-        <div class="section-body">
-          <ul class="pub-list-academic">
-            <li>
-              <span class="pub-venue-tag">IEEE WoWMoM'26</span>
-              <span class="pub-author-me">M. S. Anwar</span> et al. "COHORT: Hybrid RL for Collaborative Large DNN Inference on Multi-Robot Systems Under Real-Time Constraints," In Proc. of IEEE WoWMoM, 2026.
-            </li>
-            <li>
-              <span class="pub-venue-tag">IEEE WoWMoM'26</span>
-             Gaurav Shinde , Anuradha Ravi , Jared Lewis , Andre Harrison , Henry Gardiner, <span class="pub-author-me">M. S. Anwar</span> et al. "CAViAR: Quality-Aware Vision-and-Radio Fusion for Relative Range Estimation among Collaborative Autonomous Agents," In Proc. of IEEE WoWMoM, 2026.
-            </li>
-            <li>
-              <span class="pub-venue-tag">IEEE ICDM'25</span>
-              I. Ghosh, <span class="pub-author-me">M. S. Anwar</span>, K. Jayarajah, and N. Roy, "Imitation-Inspired Semantic-Guided Distillation for User-Conditioned Memorability Prediction," In Proc. of the 25th IEEE International Conference on Data Mining, 2025.
-            </li>
-            <li>
-              <span class="pub-venue-tag">DCOSS-IoT'25</span>
-              <span class="pub-author-me">M. S. Anwar</span> et al. "CoOpTex: Multimodal Cooperative Perception and Task Execution in Time-critical Distributed Autonomous Systems," In Proc. of DCOSS-IoT, 2025.
-            </li>
-            <li>
-              <span class="pub-venue-tag">ACM TOMM'25</span>
-              I. Ghosh, Avijoy Chakma, <span class="pub-author-me">M. S. Anwar</span> et al. "SkillNet: Human Actions Assessment via Human-AI Collaboration," ACM Transactions on Multimedia Computing, Communications, and Applications, 2025.
-            </li>
-            <li>
-              <span class="pub-venue-tag review">Under Review</span>
-              <span class="pub-author-me">M. S. Anwar</span> et al. "SERN: Simulation-Enhanced Realistic Navigation for Multi-Agent Robotic Systems in Contested Environments."
-            </li>
-            <li>
-              <span class="pub-venue-tag review">Under Review</span>
-              <span class="pub-author-me">M. S. Anwar</span> et al. "MobHeteroCAS: Mobility-Aware DNN Task Scheduling in Heterogeneous Collaborative Autonomous Systems," ACM TAAS Journal, 2024.
-            </li>
-            <li>
-              <span class="pub-venue-tag">DCOSS-IoT'24</span>
-              Ahmed, M., Hasan, Z., Faridee, A. Z. M., <span class="pub-author-me">Anwar, M. S.</span>, Jayarajah, K., Purushotham, S., ... &amp; Roy, N., "Arsfinetune: On-the-fly Tuning of Vision Models for Unmanned Ground Vehicles," Proc. of DCOSS-IoT, 2024.
-            </li>
-            <li>
-              <span class="pub-venue-tag">ICCCN'23</span>
-              Emon Dey, Mikolaj Walczak, <span class="pub-author-me">M. S. Anwar</span> et al. "A Novel ROS2 QoS Policy-Enabled Synchronizing Middleware for Co-Simulation of Heterogeneous Multi-Robot Systems," In Proc. of ICCCN, 2024.
-            </li>
-            <li>
-              <span class="pub-venue-tag">IEEE MASS'23</span>
-              <span class="pub-author-me">M. S. Anwar</span>, E. Dey, M. Devnath, I. Ghosh, N. Khan, J. Freeman, T. Gregory, N. Suri, K. Jayarajah, S. Ramamurthy, N. Roy, "HeteroEdge: Addressing Asymmetry in Heterogeneous Collaborative Autonomous Systems," In Proc. of IEEE MASS, 2023.
-            </li>
-            <li>
-              <span class="pub-venue-tag">IEEE EICT'19</span>
-              NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al. "An Efficient Technique of Hemoglobin Level Screening Using Machine Learning Algorithms," IEEE EICT, 2019.
-            </li>
-            <li>
-              <span class="pub-venue-tag">BECITHCON'19</span>
-              NB Noor, <span class="pub-author-me">M. S. Anwar</span> et al. "Comparative Study Between Decision Tree, SVM and KNN to Predict Anaemic Condition," IEEE BECITHCON, 2019.
-            </li>
-          </ul>
-          <a href="https://scholar.google.com/citations?user=CTceif4AAAAJ&hl=en" target="_blank" class="all-pubs-link">All Publications »</a>
-        </div>
-      </div> -->
-
       <!-- SKILLS -->
       <div class="section-block" id="skills">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -1040,7 +940,7 @@ footer {
           </div>
         </div>
       </div>
-
+ 
       <!-- EXPERIENCE -->
       <div class="section-block" id="experience">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -1067,7 +967,7 @@ footer {
           </div>
         </div>
       </div>
-
+ 
       <!-- EDUCATION -->
       <div class="section-block" id="education">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -1087,7 +987,7 @@ footer {
           </div>
         </div>
       </div>
-
+ 
       <!-- BLOG -->
       <div class="section-block" id="blog">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -1116,15 +1016,15 @@ footer {
           </ul>
         </div>
       </div>
-
+ 
     </div><!-- /content -->
   </div><!-- /main-layout -->
 </div><!-- /container -->
-
+ 
 <footer>
   © 2026 | Mohammad Saeid Anwar
 </footer>
-
+ 
 <script>
 // Collapse / Expand
 function toggleSection(header) {
@@ -1133,7 +1033,7 @@ function toggleSection(header) {
   body.classList.toggle('collapsed');
   icon.textContent = body.classList.contains('collapsed') ? '▶' : '▼';
 }
-
+ 
 function toggleAll(expand) {
   document.querySelectorAll('.section-body').forEach(body => {
     const icon = body.previousElementSibling.previousElementSibling.querySelector('.toggle-icon');
@@ -1146,16 +1046,22 @@ function toggleAll(expand) {
     }
   });
 }
-
+ 
 // Set initial max-heights
 document.querySelectorAll('.section-body').forEach(body => {
-  body.style.maxHeight = body.scrollHeight + 2000 + 'px';
+  body.style.maxHeight = body.scrollHeight + 5000 + 'px';
 });
-
+ 
+// Publication expand/collapse
+function togglePub(summary) {
+  const entry = summary.closest('.pub-entry');
+  entry.classList.toggle('open');
+}
+ 
 // Active tab on scroll
 const sections = document.querySelectorAll('.section-block');
 const navTabs = document.querySelectorAll('.nav-tab');
-
+ 
 function updateActiveTab() {
   let current = '';
   sections.forEach(section => {
@@ -1172,7 +1078,7 @@ function updateActiveTab() {
   });
 }
 window.addEventListener('scroll', updateActiveTab, { passive: true });
-
+ 
 // Close mobile menu on click
 navTabs.forEach(tab => {
   tab.addEventListener('click', () => {
@@ -1180,6 +1086,6 @@ navTabs.forEach(tab => {
   });
 });
 </script>
-
+ 
 </body>
 </html>
