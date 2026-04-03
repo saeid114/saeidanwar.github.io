@@ -661,11 +661,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/cavier.png" alt="COHORT architecture diagram">
+                    <img src="images/cavier.png" alt="CAViER architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">In mission-critical scenarios, autonomous agents often operate in GPS-denied or GPS-degraded environments, making it challenging to localize agents relative to themselves and objects of interest (e.g., potential cover) or adversarial robots. While vision- and radiobased modalities have individually been used to estimate relative ranges between agents and surrounding objects, each modality suffers from inherent limitations. Vision-based range estimation degrades significantly under low image overlap, partial visibility, or when an agent is too close to an object, resulting in effective zoom-in and loss of geometric context. Conversely, radio-based ranging is susceptible to multipath interference, signal fading, and environmental variability, which can substantially reduce range accuracy and reliability. To address these challenges, we introduce CAViAR, a quality-aware multimodal fusion framework for accurate relative range estimation among collaborative autonomous agents. CAViAR assigns modality-specific reliability scores and performs statistical fusion to adaptively weigh vision and radio inputs based on their estimated quality. The framework employs modality-specific quality estimators augmented with temporal features and integrates MBConv blocks to enable efficient feature processing on resource-constrained robotic platforms. We validate CAViAR on ROSbot 2 and ROSbot 2 Pro platforms using an in-house dataset collected across diverse indoor and outdoor environments. Experimental results demonstrate that our approach outperforms single-modality baselines by approximately 21% over vision-only and 36% over radio-only range estimates. Moreover, CAViAR adapts robustly to variations in scene structure, viewpoint overlap, and occlusions without requiring fine-tuning on new environments, highlighting its practicality for real-world deployment.</p>
                     <div class="pub-links">
                       <a href="https://drive.google.com/file/d/1y1q93NePiKxJdPV2igJfin0afNOzBpej/view" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -684,11 +684,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/ICDM_2025.png" alt="COHORT architecture diagram">
+                    <img src="images/ICDM_2025.png" alt="ICDM architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Image memorability (IM) estimation typically relies on learning generic semantic features from large-scale datasets; however, memorability is intrinsically individual-dependent and personalized visual viewing behavior, but overlooking this variability can undermine model performance in downstream cognitive and human-machine interaction tasks, leading towards suboptimal performance. To address this, we propose MemGaze, a unified framework that integrates knowledge distillation (KD) and imitation learning (IL) to jointly learn generic and personalized salient representations for memorability estimation by leveraging both image content and gaze-derived heatmaps. MemGaze employs a teacher network built upon a pretrained ResNet-50 backbone, followed by an encoder-decoder architecture coupled with spatial and channel attention mechanisms to generate generic saliency-aware memorability maps. A lightweight, attention-guided student encoder-decoder is then optimized through a composite imitation-guided distillation process, where knowledge is distilled from the teacher while simultaneously imitating user-specific gaze fixation heatmaps. Through this joint training process, the student network learns to produce personalized memorability estimates while achieving substantial reductions in computational complexity. We validate MemGaze on two public IM estimation datasets (LaMem and SUN) and a inhouse WoM dataset comprising of 45 participants (UMBC IRB #670) engaged in visual search and navigation tasks that reflect individualized visual attention patterns. MemGaze outperforms nine state-of-the-art IM models by capturing coarse-to-fine saliency and adapting to individual attention, achieving ≈6% improvement in memorability prediction.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/11391931" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -707,11 +707,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/Cooptex.png" alt="COHORT architecture diagram">
+                    <img src="images/Cooptex.png" alt="CoOptex architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Integrating multimodal data such as RGB and LiDAR from multiple views significantly increases computational and communication demands, which can be challenging for resource-constrained autonomous agents while meeting the time-critical deadlines required for various mission-critical applications. To address this challenge, we propose CoOpTex, a collaborative task execution framework designed for cooperative perception in distributed autonomous systems (DAS). CoOpTex contribution is twofold: (a) CoOpTex fuses multiview RGB images to create a panoramic camera view for 2D object detection and utilizes 360° LiDAR for 3D object detection, improving accuracy with a lightweight Graph Neural Network (GNN) that integrates object coordinates from both perspectives, (b) To optimize task execution and meet the deadline, CoOpTex dynamically offloads computationally intensive image stitching tasks to auxiliary devices when available and adjusts frame capture rates for RGB frames based on device mobility and processing capabilities. We implement CoOpTex in real-time on static and mobile heterogeneous autonomous agents, which helps to significantly reduce deadline violations by 100% while improving frame rates for 2D detection by 2.2× in stationary and 2× in mobile conditions, demonstrating its effectiveness in enabling real-time cooperative perception.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/11096290" class="pub-link-btn pdf">📄 PDF</a>
                       <a href="#" class="pub-link-btn code">💻 Code</a>
@@ -731,11 +731,12 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/SkillNet.png" alt="COHORT architecture diagram">
+                    <img src="images/SkillNet.png" alt="SkillNet architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Intelligent human motion analysis is essential for developing next-generation IoT and AR/VR systems that enable automated, interpretable, and fine-grained performance assessment. Motivated by the need for real-time, explainable, and transferable skill evaluation, we propose a wearable sensing framework to assess human performance by tracking skill progression and minimizing injury risk. We use live badminton gameplay and workout exercises as representative use cases, where motion dynamics, postural stability, and limb coordination are critical to success. Both activities demand optimal posture and synchronized limb movements, while improper actions or suboptimal technique can lead to decreased performance and higher injury susceptibility. We introduce SkillNet, a multi-task learning framework that extracts shared representations across all limbs while preserving limb-specific motion signatures. The architecture employs task-specific regressors to detect subtle inter-limb dissimilarities and distinctive traits, enabling collective inference in a body sensor network (BSN) environment. To holistically measure performance, we formulated a weighted performance indicator (PI) that fuses AI-driven scoring with domain-expert evaluations, providing a robust metric for both qualitative and quantitative assessment. We evaluate SkillNet on three diverse datasets Badminton Activity Recognition (BAR), Multi-Modalities Dataset of Sports (MMDOS), and Daily and Sports Activities (DSADS) capturing a broad spectrum of motion types and skill intensities. Results show that SkillNet achieves an R-squre
+ score of 86% and a mean squared error of 0.0093 in performance prediction. The integrated AI–expert scoring mechanism improves baseline performance estimation by 14.95% , demonstrating the advantage of combining human expertise with automated analysis. We further benchmark inference time, memory usage, and power consumption of the SkillNet , validating its efficiency and feasibility for real-time, end-to-end task inference on resource-constrained embedded edge devices, Jetson Nano and Jetson Xavier NX platforms.</p>
                     <div class="pub-links">
                       <a href="https://dl.acm.org/doi/abs/10.1145/3788290" class="pub-link-btn pdf">📄 PDF</a>
                       
@@ -755,11 +756,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/sern.png" alt="COHORT architecture diagram">
+                    <img src="images/sern.png" alt="SERN architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Cross reality integration of simulation and physical robots is a promising approach for multi-robot operations in contested environments, where communication may be intermittent, interference may be present, and observability may be degraded. We present SERN (Simulation-Enhanced Realistic Navigation), a framework that tightly couples a high-fidelity virtual twin with physical robots to support real-time collaborative decision making. SERN makes three main contributions. First, it builds a virtual twin from geospatial and sensor data and continuously corrects it using live robot telemetry. Second, it introduces a physics-aware synchronization pipeline that combines predictive modeling with adaptive PD control. Third, it provides a bandwidth-adaptive ROS bridge that prioritizes critical topics when communication links are constrained. We also introduce a multi-metric cost function that balances latency, reliability, computation, and bandwidth. Theoretically, we show that when the adaptive controller keeps the physical and virtual input mismatch small, synchronization error remains bounded under moderate packet loss and latency. Empirically, SERN reduces end-to-end message latency by 15% to 25% and processing load by about 15% compared with a standard ROS setup, while maintaining tight real-virtual alignment with less than 5 cm positional error and less than 2 degrees rotational error. In a navigation task, SERN achieves a 95% success rate, compared with 85% for a real-only setup and 70% for a simulation-only setup, while also requiring fewer interventions and less time to reach the goal. These results show that a simulation-enhanced cross-reality stack can improve situational awareness and multi-agent coordination in contested environments by enabling look-ahead planning in the virtual twin while using real sensor feedback to correct discrepancies.</p>
                     <div class="pub-links">
                       <a href="#" class="pub-link-btn arxiv">arXiv</a>
                     </div>
@@ -778,11 +779,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/MobheteroCAS.png" alt="COHORT architecture diagram">
+                    <img src="images/MobheteroCAS.png" alt="MobHeteroCAS architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Abstract</p>
                     <div class="pub-links">
                       <a href="#" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -801,11 +802,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/Arsfinetune.png" alt="COHORT architecture diagram">
+                    <img src="images/Arsfinetune.png" alt="Arsfinetune architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">The performance of semantic segmentation (SS) can degrade when the data distribution in the deployed environment is different from what the model initially learned during their training. While domain adaptation (DA) and continual learning (CL) methods have been proposed to improve performance in new or unseen domains over time, the effort required for annotating large swathes of training data during deployment is non-trivial; acquiring new data for training incurs both significant network, device memory costs, and manual effort for labeling. To address this, we propose ARSFineTune, a novel framework that actively selects the most informative regions of visuals encountered by a mobile robot for the CL network to learn from, greatly minimizing the data transfer overhead related to annotations. We first propose a proficient entropy-driven ranking mechanism to identify candidate regions and rank challenging images at the edge node. We then facilitate a cyclical feedback loop between the server and edge, continuously refining the accuracy of semantic segmentation by fine-tuning the model with minimal transferred data to/from the field deployed device. We implement ARSFineTune in a real-time setting using the Robotics Operating System (ROS), where a Jackal (an unmanned ground vehicle - UGV) collaborates with the central server. Through extensive experiments, we found that ARSFineTune delivers competitive performance, closely aligning with existing state-of-the-art techniques, while requiring substantially less data for fine-tuning. Specifically, with only 5% of the total labeled regions (25% challenging regions of the most 20% problematic samples) of the entire dataset for fine-tuning, ARSFineTune reaches a performance level nearly identical (≈ 97%) to the previous state-of-the-art model, boasting mIoU scores of 59.5% on the Cityscape dataset and 41% on the CAD-EdgeTune dataset, which is a challenging dataset due to varying lighting conditions over time. The reduction in annotation efforts also contribute to a 23.5% improved network latency and 41% less memory usage during model inference stage on the UGV vehicle; 79% reduction in data transfer time between UGV and annotation server and finally, 16.59% reduction in latency, 28.57% less power usage and 10% less memory usage in the server during model fine-tuning stage.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/10621572" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -824,11 +825,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/Novel_ROS2.png" alt="COHORT architecture diagram">
+                    <img src="images/Novel_ROS2.png" alt="Novel ROS2 architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Recent Internet-of-Things (IoT) networks span across a multitude of stationary and robotic devices, namely unmanned ground vehicles, surface vessels, and aerial drones, to carry out mission-critical services such as search and rescue operations, wildfire monitoring, and flood/hurricane impact assessment. Achieving communication synchrony, reliability, and minimal communication jitter among these devices is a key challenge both at the simulation and system levels of implementation due to the underpinning differences between a physics-based robot operating system (ROS) simulator that is time-based and a network-based wireless simulator that is event-based, in addition to the complex dynamics of mobile and heterogeneous IoT devices deployed in a real environment. Nevertheless, synchronization between physics (robotics) and network simulators is one of the most difficult issues to address in simulating a heterogeneous multi-robot system before transitioning it into practice. The existing TCP/IP communication protocol-based synchronizing middleware mostly relied on Robot Operating System 1 (ROS1), which expends a significant portion of communication bandwidth and time due to its master-based architecture. To address these issues, we design a novel synchronizing middleware between robotics and traditional wireless network simulators, relying on the newly released real-time ROS2 architecture with a masterless packet discovery mechanism. Additionally, we propose a ground and aerial agents' velocity-aware customized QoS policy for Data Distribution Service (DDS) to minimize the packet loss and transmission latency between a diverse set of robotic agents, and we offer the theoretical guarantee of our proposed QoS policy. We performed extensive network performance evaluations both at the simulation and system levels in terms of packet loss probability and average latency with line-of-sight (LOS) and non-line-of-sight (NLOS) and TCP/UDP communication protocols over our proposed ROS2-based synchronization middleware. Moreover, for a comparative study, we presented a detailed ablation study replacing NS-3 with a real-time wireless network simulator, EMANE, and masterless ROS2 with master-based ROS1. Our proposed middleware attests to the promise of building a large-scale IoT infrastructure with a diverse set of stationary and robotic devices that achieve low-latency communications (12% and 11% reduction in simulation and reality, respectively) while satisfying the reliability (10% and 15% packet loss reduction in simulation and reality, respectively) and high-fidelity requirements of mission-critical applications.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/10230109" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -847,11 +848,11 @@ footer {
               <div class="pub-details">
                 <div class="pub-details-inner">
                   <div class="pub-figure">
-                    <img src="images/Heteroedge.png" alt="COHORT architecture diagram">
+                    <img src="images/Heteroedge.png" alt="HeteroEdge architecture diagram">
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Gathering knowledge about surroundings and generating situation awareness for autonomous systems is of utmost importance for systems developed for smart urban and uncontested environments. For example, a large area surveillance system is typically equipped with multi-modal sensors such as cameras and LIDARs and is required to execute deep learning algorithms for action, face, behavior, and object recognition. However, these systems are subjected to power and memory limitations due to their ubiquitous nature. As a result, optimizing how the sensed data is processed, fed to the deep learning algorithms, and the model inferences are communicated is critical. In this paper, we consider a testbed comprising two Unmanned Ground Vehicles (UGVs) and two NVIDIA Jetson devices and posit a self-adaptive optimization framework that is capable of navigating the workload of multiple tasks (storage, processing, computation, transmission, inference) collaboratively on multiple heterogenous nodes for multiple tasks simultaneously. The self-adaptive optimization framework involves compressing and masking the input image frames, identifying similar frames, and profiling the devices for various tasks to obtain the boundary conditions for the optimization framework. Finally, we propose and optimize a novel parameter split-ratio, which indicates the proportion of the data required to be offloaded to another device while considering the networking bandwidth, busy factor, memory (CPU, GPU, RAM), and power constraints of the devices in the testbed. Our evaluations captured while executing multiple tasks (e.g., PoseNet, SegNet, ImageNet, DetectNet, DepthNet) simultaneously, reveal that executing 70% (split-ratio=70%) of the data on the auxiliary node minimizes the offloading latency by ≈ 33% (18.7 ms/image to 12.5 ms/image) and the total operation time by ≈ 47% (69.32s to 36.43s) compared to the baseline configuration (executing on the primary node).</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/10298549" target="_blank" class="pub-link-btn pdf">📄 PDF</a>
                       <a href="https://arxiv.org/abs/2305.03252" target="_blank" class="pub-link-btn arxiv">arXiv</a>
@@ -875,7 +876,7 @@ footer {
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Hemoglobin (Hb), a very significant parameter for the human body and deficiency of it causes anemia. During pregnancy, menstruation and ICU deficiency of it can be very risky and even caused death. So, it is important to diagnose it continuously. Usually, physicians examine it by conducting a blood test to confirm it is painful, time-consuming and costly. The major concept of this study is to screen Hb levels within a short period of time. In this study, the data of clinical blood Hb levels of a total of 104 people (54 males and 50 females) are collected along with an eye conjunctiva image. The images are taken with a Smartphone camera of constant resolution and lighting. Using MATLAB, image processing method, the percentages of the red, green and blue pixels are extracted. Taking those features, the Hb level is plotted. The 104 data have been split into two sets where the first 81 data for training purposes, the remaining 23 data have been considered for testing. To train the model of 81 data, Multivariate Linear Regression (MLR), Decision Tree (Medium), Linear Support Vector Regression (SVR) are taken and the lowest percentage of error of 11.01% has been found in the Decision Tree (Medium) while testing the 23-test data.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/9068812" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
@@ -898,7 +899,7 @@ footer {
                   </div>
                   <div class="pub-detail-text">
                     <h5>Abstract</h5>
-                    <p class="pub-abstract">Add your abstract here.</p>
+                    <p class="pub-abstract">Anemia, a disease which is caused by an inadequacy of hemoglobin or red blood cells in the blood. It is very risky at the time of pregnancy, menstruation and in ICU sometimes causing death. So, it is a need of hemoglobin and detects anemia quickly. Usually, doctors examine the eye conjunctiva color and confirmed by a blood test which is painful, time-consuming and costly. In this study, a total of 104 people (54 males and 50 females) are collected with their clinical blood hemoglobin level, anemic condition and taken palpebral conjunctiva image. The images are captured with a cell phone camera of good resolution. By using the images, the percentage of the red, green and blue pixels are extracted in MATLAB, image processing method. Taking those features, the Hemoglobin level is plotted. A total of 81 data is taken for training purposes and 23 data for testing. For Anemia detection, the 81 data are trained with a used different classifier such as Linear SVM, Coarse Tree, and Cosine KNN and have been got highest accuracy of 82.61% in Decision Tree (Coarse) by testing 23 data.</p>
                     <div class="pub-links">
                       <a href="https://ieeexplore.ieee.org/abstract/document/9063188" class="pub-link-btn pdf">📄 PDF</a>
                     </div>
