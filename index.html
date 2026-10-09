@@ -597,6 +597,53 @@ footer {
   color: #999;
 }
  
+
+/* ===== ROBOTS ===== */
+.robot-intro { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 12px; }
+.robot-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.robot-jump a {
+  font-size: 12px; font-weight: 600; padding: 4px 12px; border: 1px solid #ccc;
+  border-radius: 3px; color: #555; transition: all 0.2s;
+}
+.robot-jump a:hover { border-color: #337ab7; color: #337ab7; text-decoration: none; }
+.robot-group-title {
+  font-size: 15px; font-weight: 700; color: #333; margin: 26px 0 12px;
+  padding-left: 10px; border-left: 4px solid #337ab7; scroll-margin-top: 70px;
+}
+.robot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.robot-card {
+  border: 1px solid #e1e8f0; border-radius: 8px; background: #fff; overflow: hidden;
+  display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.robot-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.robot-img {
+  height: 210px; background: #fff; border-bottom: 1px solid #eef1f5;
+  display: flex; align-items: center; justify-content: center; padding: 12px;
+}
+.robot-img img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.robot-img-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  text-align: center; font-size: 12px; color: #888; border-radius: 4px;
+  background: linear-gradient(135deg, #e8eef5, #d5dde8);
+}
+.robot-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.robot-tag {
+  align-self: flex-start; background: #337ab7; color: #fff; font-size: 10.5px; font-weight: 700;
+  padding: 2px 8px; border-radius: 2px; letter-spacing: 0.4px; text-transform: uppercase;
+}
+.robot-body h4 { font-size: 15px; font-weight: 700; color: #333; margin: 8px 0 2px; }
+.robot-sub { font-size: 12.5px; color: #337ab7; font-weight: 600; margin-bottom: 8px; }
+.robot-body p { font-size: 13px; color: #555; line-height: 1.7; flex: 1; }
+.robot-link { margin-top: 10px; font-size: 12.5px; font-weight: 600; }
+.flight-stack {
+  background: #f7faff; border: 1px solid #e1e8f0; border-left: 4px solid #337ab7;
+  border-radius: 6px; padding: 12px 14px; margin-bottom: 14px; font-size: 13px; color: #444;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+}
+.flight-stack strong { margin-right: 4px; }
+.flight-stack-note { width: 100%; font-size: 12.5px; color: #666; margin-top: 2px; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .main-layout { flex-direction: column; gap: 24px; }
@@ -615,6 +662,7 @@ footer {
   .news-image-gallery img { height: auto; max-height: 260px; }
   .pub-details-inner { flex-direction: column; }
   .pub-figure { width: 100%; max-width: 300px; }
+  .robot-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -642,6 +690,7 @@ footer {
     <a href="#home" class="nav-tab active" data-section="home">Home</a>
     <a href="#news" class="nav-tab" data-section="news">News</a>
     <a href="#publications" class="nav-tab" data-section="publications">Publications</a>
+    <a href="#robots" class="nav-tab" data-section="robots">Robots</a>
     <a href="#skills" class="nav-tab" data-section="skills">Skills</a>
     <a href="#experience" class="nav-tab" data-section="experience">Experience</a>
     <a href="#education" class="nav-tab" data-section="education">Education</a>
@@ -710,10 +759,10 @@ footer {
       <!-- NEWS -->
       <div class="section-block" id="news">
         <div class="section-toggle" onclick="toggleSection(this)">
-          <span class="toggle-icon">▼</span>
+          <span class="toggle-icon">&#9660;</span>
           <h2>News</h2>
         </div>
-       <hr class="section-divider">
+        <hr class="section-divider">
         <div class="section-body">
 
           <div class="featured-news-list">
@@ -723,21 +772,15 @@ footer {
                   <span class="news-date-badge">05/2026</span>
                   <div>
                     <h4>Paper Accepted at ICCCN 2026</h4>
+                  </div>
                 </div>
-                <span class="news-card-arrow">▶</span>
+                <span class="news-card-arrow">&#9654;</span>
               </summary>
               <div class="news-expanded-content">
-                <p>Our paper titled <strong>"SERN: Bandwidth-Adaptive Cross-Reality Synchronization for Simulation-Enhanced Robot Navigation"</strong> has been accepted at The 35th International Conference on Computer Communications and Networks (ICCCN 2026)</p>
-               
-                </div>
-                
+                <p>Our paper titled <strong>"SERN: Bandwidth-Adaptive Cross-Reality Synchronization for Simulation-Enhanced Robot Navigation"</strong> has been accepted at The 35th International Conference on Computer Communications and Networks (ICCCN 2026).</p>
+              </div>
             </details>
-          </div>
-       
-       <hr class="section-divider">
-        <div class="section-body">
 
-          <div class="featured-news-list">
             <details class="news-card" open>
               <summary>
                 <div class="news-card-title">
@@ -747,7 +790,7 @@ footer {
                     <div class="news-short">The workshop brought together researchers, students, and collaborators for hands-on demonstrations of the NSF TRACE testbed and ongoing multi-agent autonomy research.</div>
                   </div>
                 </div>
-                <span class="news-card-arrow">▶</span>
+                <span class="news-card-arrow">&#9654;</span>
               </summary>
               <div class="news-expanded-content">
                 <p>Our <strong>MPSC Lab</strong> and the <strong>Cypress Center</strong> successfully organized the <strong>NSF TRACE Testbed Workshop</strong> and a live research demonstration. The event highlighted ongoing work on collaborative autonomous systems, real-time perception, distributed computing, and testbed-driven experimentation.</p>
@@ -770,7 +813,7 @@ footer {
                     <figcaption>Participants observing the TRACE testbed capabilities.</figcaption>
                   </figure>
                 </div>
-                
+              </div>
             </details>
           </div>
 
@@ -786,7 +829,7 @@ footer {
           </table>
         </div>
       </div>
- 
+
       <!-- PUBLICATIONS -->
       <div class="section-block" id="publications">
         <div class="section-toggle" onclick="toggleSection(this)">
@@ -1085,6 +1128,168 @@ footer {
         </div>
       </div>
  
+      <!-- ROBOTS -->
+      <div class="section-block" id="robots">
+        <div class="section-toggle" onclick="toggleSection(this)">
+          <span class="toggle-icon">&#9660;</span>
+          <h2>Robots I've Worked With</h2>
+        </div>
+        <hr class="section-divider">
+        <div class="section-body">
+          <p class="robot-intro">My research runs on real hardware. I have hands-on experience deploying perception and collaborative task-execution pipelines through ROS/ROS 2 across wheeled, legged, humanoid, and aerial platforms, often as mixed teams of heterogeneous robots.</p>
+          <div class="robot-jump"><a href="#robots-ugvs">Wheeled Robots (UGVs)</a><a href="#robots-humanoids">Humanoid</a><a href="#robots-quadrupeds">Quadrupeds</a><a href="#robots-drones">Drones (UAVs)</a></div>
+          <h3 class="robot-group-title" id="robots-ugvs">Wheeled Robots (UGVs)</h3>
+          <div class="robot-grid">
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/clearpath_jackal.jpg" alt="Clearpath Jackal" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>Clearpath Jackal</h4>
+                  <div class="robot-sub">Edge perception on a small footprint</div>
+                  <p>Lidar, a ZED stereo camera, and an onboard computer packed into a chassis you can carry by hand. In ARSFineTune, the Jackal ran semantic segmentation at the edge while sending only its hardest image regions to a server for continual fine-tuning.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/clearpath_husky.jpg" alt="Clearpath Husky" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>Clearpath Husky</h4>
+                  <div class="robot-sub">The heavy lifter for sensors and compute</div>
+                  <p>When an experiment needs more sensors or GPU than a small robot can carry, the Husky takes the load, with a tall mast holding dual GPS antennas and cameras above the chassis. It has served as a high-compute node and an outdoor data-collection vehicle in our multi-robot work.</p>
+                  <a href="https://cypress.umbc.edu/testbed/trace/trace-testbed-design/clearpath-robotics-husky-a300-ugv/" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/husarion_panther.jpg" alt="Husarion Panther" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>Husarion Panther</h4>
+                  <div class="robot-sub">ROS 2 field robotics</div>
+                  <p>A weather-resistant, ROS 2-native four-wheel robot built for rough outdoor terrain. Its open mounting rails make it easy to add lidar, cameras, and edge compute for navigation and perception testing outside the lab.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/rosbot2_pro.jpg" alt="Husarion ROSbot 2 Pro" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>Husarion ROSbot 2 Pro</h4>
+                  <div class="robot-sub">Collaborative ranging and localization</div>
+                  <p>A compact 4WD research robot with an RGB-D camera, lidar, and onboard computer. ROSbot 2 and ROSbot 2 Pro units served as the collaborating agents for collecting our vision-and-radio dataset and validating CAViAR indoors and outdoors.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/rosmaster_x3.jpg" alt="Yahboom ROSMASTER X3" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>Yahboom ROSMASTER X3</h4>
+                  <div class="robot-sub">Omnidirectional indoor navigation</div>
+                  <p>A ROS robot on mecanum wheels with lidar and an Orbbec depth camera. Its holonomic motion makes it handy for indoor mapping, navigation, and depth-perception experiments on low-cost hardware.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/turtlebot3.jpg" alt="TurtleBot3" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UGV</span>
+                  <h4>TurtleBot3</h4>
+                  <div class="robot-sub">Low-cost ROS testbed</div>
+                  <p>An inexpensive place to get ROS/ROS 2 code right: SLAM, navigation stacks, and multi-robot messaging are debugged here before they touch larger hardware. The Burger and Waffle variants share the same open-source software, so a pipeline moves between them with little change.</p>
+                  <a href="https://docs.robotis.com/docs/systems/turtlebot3/overview/" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+          </div>
+          <h3 class="robot-group-title" id="robots-humanoids">Humanoid</h3>
+          <div class="robot-grid">
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/unitree_g1.jpg" alt="Unitree G1" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">Humanoid</span>
+                  <h4>Unitree G1</h4>
+                  <div class="robot-sub">Perception at human height</div>
+                  <p>Unitree's humanoid puts a depth camera and 3D lidar at eye level, with a developer computer in its torso. I have worked with the G1 to study how scene understanding and VLM-based task reasoning carry over from wheeled robots to a platform that sees and moves like a person.</p>
+                  <a href="https://www.unitree.com/g1" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+          </div>
+          <h3 class="robot-group-title" id="robots-quadrupeds">Quadrupeds</h3>
+          <div class="robot-grid">
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/bd_spot.jpg" alt="Boston Dynamics Spot" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">Quadruped</span>
+                  <h4>Boston Dynamics Spot</h4>
+                  <div class="robot-sub">Legged sensing that can reach and grasp</div>
+                  <p>With its arm and camera payload, Spot can open doors, pick up objects, and point its sensors exactly where they are needed. In our testbed it acts as a legged perception node that reaches multi-level, obstacle-heavy areas and shares what it sees with the rest of the team.</p>
+                  <a href="https://cypress.umbc.edu/testbed/trace/trace-testbed-design/bostondynamics-spot-qugv/" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/ghost_vision60.jpg" alt="Ghost Robotics Vision 60" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">Quadruped</span>
+                  <h4>Ghost Robotics Vision 60</h4>
+                  <div class="robot-sub">Field trials in degraded conditions</div>
+                  <p>Built for military and industrial field use, the Vision 60 keeps walking through mud, sand, and rain. It lets us stress-test perception and communication outdoors under the degraded, GPS-unreliable conditions that our contested-environment research targets.</p>
+                  <a href="https://cypress.umbc.edu/testbed/trace/trace-testbed-design/ghostrobotics-vision60-qugv/" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/unitree_go2.jpg" alt="Unitree Go2" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">Quadruped</span>
+                  <h4>Unitree Go2</h4>
+                  <div class="robot-sub">Scaling from one robot to a team</div>
+                  <p>Small, quick to deploy, and affordable enough to run several at once. The Go2's head-mounted lidar and SDK make it a convenient extra agent when collaborative perception experiments grow from a single robot to a mixed legged-and-wheeled team.</p>
+                  <a href="https://cypress.umbc.edu/testbed/trace/trace-testbed-design/unitree-go2-edu-plus-qugv/" target="_blank" class="robot-link">Platform details &#8599;</a>
+                </div>
+              </div>
+          </div>
+          <h3 class="robot-group-title" id="robots-drones">Drones (UAVs)</h3>
+          <div class="flight-stack">
+            <strong>Flight software &amp; tools:</strong>
+            <span class="skill-tag">PX4 Autopilot</span><span class="skill-tag">ModalAI Flight Deck</span><span class="skill-tag">VOXL 2</span><span class="skill-tag">QGroundControl</span>
+            <div class="flight-stack-note">Flight controller setup, parameter tuning, mission planning, and telemetry monitoring.</div>
+          </div>
+          <div class="robot-grid">
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/qualcomm_rb5.jpg" alt="Qualcomm Flight RB5" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UAV</span>
+                  <h4>Qualcomm Flight RB5</h4>
+                  <div class="robot-sub">Onboard AI with 5G connectivity</div>
+                  <p>Qualcomm's reference drone platform built around the QRB5165 processor, with on-device AI acceleration, multiple cameras, and 5G/Wi-Fi links. I used it for onboard vision inference and aerial-to-ground offloading over wireless networks.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/arl_grazer.jpg" alt="ARL Grazer" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UAV</span>
+                  <h4>ARL Grazer</h4>
+                  <div class="robot-sub">Research quadrotor</div>
+                  <p>An S500-class research quadrotor from our Army Research Laboratory collaboration, fitted with GPS and a companion computer. I have flown it for aerial sensing and UAV&ndash;UGV coordination experiments.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><img src="images/robots/modalai_sentinel.jpg" alt="ModalAI Sentinel" loading="lazy"></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UAV</span>
+                  <h4>ModalAI Sentinel</h4>
+                  <div class="robot-sub">Autonomous flight on VOXL 2</div>
+                  <p>ModalAI's development drone powered by the VOXL 2 flight computer, pairing PX4 flight control with onboard cameras for visual-inertial odometry and obstacle avoidance. I use it to test GPS-denied flight and onboard perception.</p>
+                </div>
+              </div>
+              <div class="robot-card">
+                <div class="robot-img"><div class="robot-img-placeholder">Add image:<br>images/robots/dji_mini.jpg</div></div>
+                <div class="robot-body">
+                  <span class="robot-tag">UAV</span>
+                  <h4>DJI Mini</h4>
+                  <div class="robot-sub">Lightweight aerial imaging</div>
+                  <p>A foldable, sub-250 g drone with a gimbal-stabilized camera. It is a quick way to capture aerial views and imagery for datasets and scene context without the setup overhead of a research airframe.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
       <!-- SKILLS -->
       <div class="section-block" id="skills">
         <div class="section-toggle" onclick="toggleSection(this)">
